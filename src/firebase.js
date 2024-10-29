@@ -3,14 +3,14 @@ import { initializeApp } from "firebase/app";
 import {createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut} from "firebase/auth";
 import {addDoc, collection, getFirestore} from "firebase/firestore";
 import {toast} from "react-toastify";
-
 const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: ""
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY  ,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.MESSAGING_SENDER_ID,
+  appId: import.meta.env.APP_ID
 };
 
 // Initialize Firebase
